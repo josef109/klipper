@@ -1681,7 +1681,7 @@ class T5UID1:
 
     def _load_macro_menus(self):
         '''Read the user-defined macro menus from DGUS_Menu_Macros.cfg into a dictionary'''
-        macros_file_path = '/home/pi/printer_data/config/DGUS_Menu_Macros.cfg'
+        macros_file_path = '/home/pi/printer_data/config/cfgs/DGUS_Menu_Macros.cfg'
 
         if not os.path.exists(macros_file_path):
             raise self.printer.config_error("Error: DGUS_Menu_Macros.cfg file not found!")
@@ -1709,7 +1709,7 @@ class T5UID1:
     def capture_macros_list(self, section_name):
         '''Build a list of all macros listed in the named section of DGUS_Menu_Macros.cfg'''
 
-        macros_file_path = '/home/pi/printer_data/config/DGUS_Menu_Macros.cfg'
+        macros_file_path = '/home/pi/printer_data/config/cfgs/DGUS_Menu_Macros.cfg'
         try:
             current_mtime = os.path.getmtime(macros_file_path)
         except FileNotFoundError as e:
