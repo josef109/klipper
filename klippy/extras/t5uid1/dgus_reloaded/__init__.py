@@ -9,7 +9,7 @@ controls = {
     'resume':   2, # popup_window
 
     # leveling_automatic
-    'disable':  5, # return_key_code
+    'disable':  5, # return_key_code   ; this function is not required
 
     # settings_menu2
     'extra2':   4, # return_key_code
@@ -21,16 +21,19 @@ controls = {
 
 constants = {
     'temp_pla': {
-        'hotend': 200,
-        'bed': 60
+        'hotend': 210,
+        'bed': 60,
+        'min_extrude': 190
     },
     'temp_abs': {
         'hotend': 240,
-        'bed': 80
+        'bed': 90,
+        'min_extrude': 230
     },
     'temp_petg': {
-        'hotend': 240,
-        'bed': 60
+        'hotend': 225,
+        'bed': 80,
+        'min_extrude': 220
     },
 
     'popup_confirmed':  1,
@@ -47,9 +50,9 @@ constants = {
     'extruder_e1':      1,
 
     'heater_all':       -2,
-    'heater_bed':       -1,
+    'heater_bed':       1,
     'heater_h0':        0,
-    'heater_h1':        1,
+    'heater_h1':        2,
 
     'stepper_enable':   1,
     'stepper_disable':  2,
@@ -78,6 +81,9 @@ constants = {
 
     'disabled':           0,
     'enabled':            1,
+
+    'scroll_up':    0,
+    'scroll_down':  1,
 
     'status_icon_pause':  1 << 0,
     'status_icon_resume': 1 << 1,
